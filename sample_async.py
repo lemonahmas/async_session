@@ -8,7 +8,7 @@ import timerAa
 
 class async_tests(object):
     def __init__(self):
-        print("|| Abandon all hope ye who enter here. ||")
+        print("|| lasciate ogne speranza, voi ch' intrate. ||")
 
 
     def set_url(self, url:list):

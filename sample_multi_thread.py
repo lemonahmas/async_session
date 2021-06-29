@@ -20,7 +20,7 @@ class multi_thread():
 
 
 if __name__ == "__main__":
-    txt = requests.get("https://www.bilibili.com").text
+    txt = requests.get("https://music.163.com").text
     #print(txt)
     urls = []
     for _ in bs(txt, 'html.parser').find_all('a'):
