@@ -26,7 +26,7 @@ class async_tests(object):
 
     async def fetch_url(self,url):
         req = await self.async_client.get(url)
-        return str(bs(req.text,'html.parser').title)
+        return str(bs(req.content.decode("utf-8"),'html.parser').title)
 
 
     async def async_rest_calls(self):
@@ -50,7 +50,7 @@ class async_tests(object):
         title = []
         for url in self.url:
             req = session.get(url)
-            title.append(str(bs(req.text,'html.parser').title))
+            title.append(str(bs(req.content.decode("utf-8"),'html.parser').title))
         with open("./sync.txt","wb") as f:
             for i in title:
                 f.write((i+"\n").encode())
